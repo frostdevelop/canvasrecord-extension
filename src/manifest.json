@@ -1,0 +1,26 @@
+{
+	"manifest_version": 3,
+	"name": "CanvasRecord",
+	"version": "1.0.0",
+	"description": "Record your canvases with EASE!",
+	"permissions": [
+		"activeTab",
+		"scripting"
+	],
+	"action": {
+		"default_icon": {
+			"16": "media/icon-16.png",
+			"48": "media/icon-48.png",
+			"128": "media/icon-128.png"
+		},
+		"default_title":"Click to activate me!"
+	},
+	"icons": {
+		"16": "media/icon-16.png",
+		"48": "media/icon-48.png",
+		"128": "media/icon-128.png"
+	},
+	"background": {
+		"service_worker":"service-worker.js"
+	}
+}

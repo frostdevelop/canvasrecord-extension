@@ -1,0 +1,112 @@
+@keyframes main-floatIn {
+	0% {opacity:0;filter:blur(6px);transform:perspective(400px) rotateX(45deg) scale(0.8);}
+}
+
+.flw-main {
+    --flw-tbk-1: rgba(40, 40, 165, 0.2);
+    --flw-bk-1: rgb(31 31 75);
+    --flw-bk-2: rgb(4 4 61);
+    --flw-br-1: rgba(200, 200, 255, 0.2);
+    --flw-tx-1: white;
+    --flw-tx-2: grey;
+    --flw-sb-1: #08001c;
+    display: flex;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    flex-direction: column;
+    background: var(--flw-tbk-1);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid var(--flw-br-1);
+    backdrop-filter: blur(5px);
+    color: var(--flw-tx-1);
+    z-index: 1000;
+    font-family: Arial, Helvetica, system-ui, sans-serif;
+    color-scheme: dark;
+	animation: main-floatIn .8s ease-out;
+}
+
+.flw-header_title {
+    font-size: 20px;
+}
+
+.flw-header {
+    width: 10vw;
+    border-bottom: 1px solid var(--flw-br-1);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.flw-rowset {
+    display: flex;
+}
+
+.flw-input,.flw-button{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    border: 1px solid var(--flw-br-1);
+    background: var(--flw-bk-2);
+    width: 100%;
+    transition: .1s ease background;
+}
+
+.flw-input:focus {
+    outline:none;
+}
+
+.flw-input:hover,.flw-button:hover {
+    background: var(--flw-bk-1);
+}
+
+.flw-input:active,.flw-button:active {
+    background-color: var(--flw-sb-1);
+}
+
+.flw-button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    border: 1px solid var(--flw-br-1);
+    background: var(--flw-bk-2);
+    cursor: pointer;
+    transition: .2s ease background, .2s ease transform;
+}
+
+.flw-button:disabled {
+    color: var(--flw-tx-2);
+    cursor: not-allowed;
+    background: none !important;
+    transform: scale(1) !important;
+}
+
+.flw-button:hover {
+    transform: scale(1.1);
+}
+
+.flw-button:active {
+    background: none;
+    transform: scale(0.9);
+}
+
+.flw-footer {
+    font-size: 10px;
+    text-align: right;
+    margin-top: 20px;
+    color: var(--flw-tx-2);
+    user-select: none;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.cr-time {
+    font-size: 30px;
+    text-align: center;
+}
+
+.cr-fps {
+    display: flex;
+    align-items: center;
+}
